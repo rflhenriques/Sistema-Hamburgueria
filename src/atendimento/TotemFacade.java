@@ -1,12 +1,12 @@
 package atendimento;
 
-import burgergof.cardapio.IItemCardapio;
-import burgergof.model.Carrinho;
-import burgergof.model.Pedido;
-import burgergof.pagamento.IEstrategiaPagamento;
-import burgergof.estoque.GerenciadorEstoque;
-import burgergof.cozinha.FilaCozinha;
-import burgergof.notificacao.IObserver;
+import cardapio.IItemCardapio;
+import model.Carrinho;
+import model.Pedido;
+import pagamento.IEstrategiaPagamento;
+import estoque.GerenciadorEstoque;
+import cozinha.FilaCozinha;
+import notificacao.IObserver;
 
 public class TotemFacade {
 

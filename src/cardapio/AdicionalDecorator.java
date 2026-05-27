@@ -1,6 +1,6 @@
 package cardapio;
 
-import burgergof.visitor.IVisitor;
+import visitor.IVisitor;
 
 public abstract class AdicionalDecorator implements IItemCardapio {
 

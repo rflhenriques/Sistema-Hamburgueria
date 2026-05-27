@@ -1,6 +1,6 @@
 package cardapio;
 
-import burgergof.visitor.IVisitor;
+import visitor.IVisitor;
 
 public class Produto implements IItemCardapio {
 

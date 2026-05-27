@@ -1,7 +1,7 @@
 package carrinho;
 
-import burgergof.cardapio.IItemCardapio;
-import burgergof.model.Carrinho;
+import cardapio.IItemCardapio;
+import model.Carrinho;
 
 public class ComandoAdicionarItem implements IComando {
 

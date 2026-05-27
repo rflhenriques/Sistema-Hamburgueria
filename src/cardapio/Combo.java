@@ -1,6 +1,6 @@
 package cardapio;
 
-import burgergof.visitor.IVisitor;
+import visitor.IVisitor;
 import java.util.ArrayList;
 import java.util.List;
 

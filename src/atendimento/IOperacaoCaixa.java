@@ -1,6 +1,6 @@
 package atendimento;
 
-import burgergof.model.Pedido;
+import model.Pedido;
 
 public interface IOperacaoCaixa {
     boolean cancelarPedido(Pedido pedido, String senhaOperador);

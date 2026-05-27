@@ -1,6 +1,6 @@
 package atendimento;
 
-import burgergof.model.Pedido;
+import model.Pedido;
 
 public class CaixaReal implements IOperacaoCaixa {
 
