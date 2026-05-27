@@ -8,7 +8,7 @@ public class SistemaHamburgueria {
     private boolean aberto;
 
     private SistemaHamburgueria() {
-        this.nomeRestaurante = "Hamburgueria do Rafael";
+        this.nomeRestaurante = "BurgerGoF";
         this.aberto = true;
         System.out.println("[Singleton] SistemaHamburgueria inicializado.");
     }
@@ -24,9 +24,17 @@ public class SistemaHamburgueria {
         return instancia;
     }
 
-    public String getNomeRestaurante() { return nomeRestaurante; }
-    public boolean isAberto() { return aberto; }
-    public void fechar() { this.aberto = false; }
+    public String getNomeRestaurante() {
+        return nomeRestaurante;
+    }
+
+    public boolean isAberto() {
+        return aberto;
+    }
+
+    public void fechar() {
+        this.aberto = false;
+    }
 
     @Override
     public String toString() {

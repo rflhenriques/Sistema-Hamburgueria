@@ -17,8 +17,8 @@ public class CaixaReal implements IOperacaoCaixa {
     @Override
     public boolean estornarPagamento(Pedido pedido, String senhaOperador) {
         System.out.println("[CaixaReal] Estornando R$ "
-        + String.format("%.2f", pedido.getTotalPago())
-        + " do pedido #" + pedido.getId());
+                + String.format("%.2f", pedido.getTotalPago())
+                + " do pedido #" + pedido.getId());
         return true;
     }
 
@@ -32,8 +32,10 @@ public class CaixaReal implements IOperacaoCaixa {
     @Override
     public void fecharCaixa() {
         this.aberto = false;
-        System.out.println("[CaixaReal] Caixa fechado. Operador: " +operadorAtual);
+        System.out.println("[CaixaReal] Caixa fechado. Operador: " + operadorAtual);
     }
 
-    public boolean isAberto() { return aberto; }
+    public boolean isAberto() {
+        return aberto;
+    }
 }

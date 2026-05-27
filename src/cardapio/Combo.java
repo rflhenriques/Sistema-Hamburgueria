@@ -2,7 +2,7 @@ package cardapio;
 
 import burgergof.visitor.IVisitor;
 import java.util.ArrayList;
-import java.util.list;
+import java.util.List;
 
 public class Combo implements IItemCardapio {
 
@@ -21,7 +21,7 @@ public class Combo implements IItemCardapio {
         System.out.println("[Combo] Adicionado ao " + nome + ": " + item.getDescricao());
     }
 
-    public void remover (IItemCardapio item) {
+    public void remover(IItemCardapio item) {
         itens.remove(item);
     }
 
@@ -42,7 +42,8 @@ public class Combo implements IItemCardapio {
         StringBuilder sb = new StringBuilder(nome + " (");
         for (int i = 0; i < itens.size(); i++) {
             sb.append(itens.get(i).getDescricao());
-            if (i < itens.size() - 1) sb.append(", ");
+            if (i < itens.size() - 1)
+                sb.append(", ");
         }
         sb.append(")");
         if (desconto > 0) {
@@ -61,6 +62,6 @@ public class Combo implements IItemCardapio {
 
     @Override
     public String toString() {
-        return getDescricao() + " - R$ " + String.format("%.2f", getPreco());
+        return getDescricao() + " — R$ " + String.format("%.2f", getPreco());
     }
 }

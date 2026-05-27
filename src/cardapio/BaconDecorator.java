@@ -1,6 +1,6 @@
 package cardapio;
 
-public class BaconDecorator extends AdicionalDecorator{
+public class BaconDecorator extends AdicionalDecorator {
 
     private static final double PRECO_BACON = 3.00;
 
