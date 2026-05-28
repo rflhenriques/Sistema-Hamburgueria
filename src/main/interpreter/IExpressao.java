@@ -1,4 +1,7 @@
 package main.interpreter;
 
-public class IExpressao {
+import main.model.Carrinho;
+
+public interface IExpressao {
+    void interpretar(Carrinho contexto);
 }
