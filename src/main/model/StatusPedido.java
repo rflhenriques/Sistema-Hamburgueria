@@ -1,4 +1,10 @@
 package main.model;
 
-public class StatusPedido {
+public enum StatusPedido {
+    AGUARDANDO_PAGAMENTO,
+    PAGO,
+    NA_COZINHA,
+    PRONTO,
+    ENTREGUE,
+    CANCELADO
 }
