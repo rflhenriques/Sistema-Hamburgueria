@@ -28,7 +28,7 @@ public class DiretorCozinha {
         builder.reset();
         return builder
                 .setPao("Pão Integral")
-                .SetCarne("Grão-de-bico")
+                .setCarne("Grão-de-bico")
                 .semIngrediente("Molho Especial")
                 .getResultado();
     }

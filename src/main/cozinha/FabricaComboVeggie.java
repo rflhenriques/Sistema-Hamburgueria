@@ -12,9 +12,19 @@ public class FabricaComboVeggie implements IFabricaCombo {
     }
 
     @Override
+    public Produto criarBurguer() {
+        return null;
+    }
+
+    @Override
     public Produto criarBebida() {
         return new Produto("Suco Natural", 9.00, "Bebida",
                 FabricaInfoNutricional.getInfo("Suco Natural"));
+    }
+
+    @Override
+    public Produto CriarBebida() {
+        return null;
     }
 
     @Override

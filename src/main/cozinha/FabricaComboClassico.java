@@ -6,9 +6,19 @@ import main.cardapio.FabricaInfoNutricional;
 public class FabricaComboClassico implements IFabricaCombo {
 
     @Override
+    public Produto criarBurger() {
+        return null;
+    }
+
+    @Override
     public Produto criarBurguer() {
         return new Produto("Burguer Clássico", 22.90, "Hamburguer",
                 FabricaInfoNutricional.getInfo("Burguer Clássico"));
+    }
+
+    @Override
+    public Produto criarBebida() {
+        return null;
     }
 
     @Override
