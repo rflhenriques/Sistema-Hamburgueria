@@ -1,8 +1,8 @@
 package main.model;
 
 import main.cardapio.IItemCardapio;
-import main.cozinha.EstadoAguardandoPagamento;
 import main.cozinha.IEstadoPedido;
+import main.cozinha.EstadoAguardandoPagamento;
 import main.notificacao.IObserver;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ public class Pedido implements Cloneable {
 
     private static int contadorId = 1;
 
-    public static void resetControlador() {
+    public static void resetContador() {
         contadorId = 1;
     }
 
@@ -54,9 +54,7 @@ public class Pedido implements Cloneable {
         notificarObservers();
     }
 
-    public IEstadoPedido getEstadoAtual() {
-        return estadoAtual;
-    }
+    public IEstadoPedido getEstadoAtual() { return estadoAtual; }
 
     public void addObserver(IObserver observer) {
         observers.add(observer);
@@ -67,7 +65,7 @@ public class Pedido implements Cloneable {
     }
 
     public void notificarObservers() {
-        for (IObserver obs : observer) {
+        for (IObserver obs : observers) {
             obs.atualizar(this);
         }
     }
@@ -100,22 +98,19 @@ public class Pedido implements Cloneable {
     public int getId() {
         return id;
     }
-
     public String getNomeCliente() {
         return nomeCliente;
     }
-
     public double getTotalPago() {
         return totalPago;
     }
-
     public void setTotalPago(double v) {
         this.totalPago = v;
     }
 
     @Override
     public String toString() {
-        return "Pedido #" + id + " [" + nomeCliente +"] " + estadoAtual.getNome()
+        return "Pedido #" + id + " [" + nomeCliente + "] — " + estadoAtual.getNome()
                 + " | Total: R$ " + String.format("%.2f", calcularTotal());
     }
 }

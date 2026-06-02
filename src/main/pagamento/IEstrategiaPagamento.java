@@ -1,4 +1,6 @@
 package main.pagamento;
 
-public class IEstrategiaPagamento {
+public interface IEstrategiaPagamento {
+    boolean processar (double valor);
+    String getDescricao();
 }
