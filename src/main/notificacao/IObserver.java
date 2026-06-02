@@ -1,4 +1,7 @@
 package main.notificacao;
 
-public class IObserver {
+import main.model.Pedido;
+
+public interface IObserver {
+    void atualiar(Pedido pedido);
 }
