@@ -2,7 +2,8 @@ package main.pagamento;
 
 public class PagamentoCartao implements IEstrategiaPagamento {
 
-    private static final double TAXA_CREDITO = 0.035; // 3.5%
+    private static final double TAXA_CREDITO = 0.035;
+
     private final AdapterMercadoPago adapter;
 
     public PagamentoCartao() {
@@ -14,12 +15,9 @@ public class PagamentoCartao implements IEstrategiaPagamento {
         double taxa = valor * TAXA_CREDITO;
         double valorFinal = valor + taxa;
 
-        System.out.println("[Strategy/Cartão] Valor original: R$ "
-                + String.format("%.2f", valor));
-        System.out.println("[Strategy/Cartão] Taxa operadora (3,5%): R$ "
-                + String.format("%.2f", taxa));
-        System.out.println("[Strategy/Cartão] Valor final: R$ "
-                + String.format("%.2f", valorFinal));
+        System.out.println("[Strategy/Cartão] Valor original: R$ " + String.format("%.2f", valor));
+        System.out.println("[Strategy/Cartão] Taxa operadora (3,5%): R$ " + String.format("%.2f", taxa));
+        System.out.println("[Strategy/Cartão] Valor final: R$ " + String.format("%.2f", valorFinal));
 
         return adapter.processar(valorFinal);
     }

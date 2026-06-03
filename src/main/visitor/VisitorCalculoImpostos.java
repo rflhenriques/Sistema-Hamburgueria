@@ -6,8 +6,11 @@ import main.cardapio.Produto;
 public class VisitorCalculoImpostos implements IVisitor {
 
     private static final double ICMS_ALIMENTO = 0.07;
+
     private static final double ICMS_BEBIDA = 0.12;
+
     private static final double ICMS_SOBREMESA = 0.09;
+
     private double totalImpostos = 0.0;
 
     @Override

@@ -3,8 +3,11 @@ package main.cardapio;
 public class InfoNutricional {
 
     private final String nomeIngrediente;
+
     private final int calorias;
+
     private final String alergenos;
+
     private final String descricaoDetalhada;
 
     public InfoNutricional(String nomeIngrediente, int calorias,

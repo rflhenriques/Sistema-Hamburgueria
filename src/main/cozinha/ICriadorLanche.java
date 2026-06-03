@@ -3,6 +3,7 @@ package main.cozinha;
 import main.cardapio.Produto;
 
 public interface ICriadorLanche {
+
     Produto criarLanche();
 
     default String descreverLanche() {

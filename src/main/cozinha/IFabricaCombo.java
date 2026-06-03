@@ -6,13 +6,10 @@ public interface IFabricaCombo {
 
     Produto criarBurger();
 
-    Produto criarBurguer();
-
     Produto criarBebida();
-
-    Produto CriarBebida();
 
     Produto criarAcompanhamento();
 
     Produto criarSobremesa();
+
 }

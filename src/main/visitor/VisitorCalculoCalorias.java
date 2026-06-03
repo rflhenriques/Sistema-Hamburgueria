@@ -4,6 +4,7 @@ import main.cardapio.Combo;
 import main.cardapio.Produto;
 
 public class VisitorCalculoCalorias implements IVisitor {
+
     private int totalCalorias = 0;
 
     @Override

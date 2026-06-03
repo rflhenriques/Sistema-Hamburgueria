@@ -9,7 +9,7 @@ public class EstacaoFritadeira extends EstacaoCozinha {
     @Override
     public void executar(String tarefa) {
         System.out.println("[Mediator/Fritadeira] Fritando: " + tarefa);
-        System.out.println("[Mediator/Fritadeira] ✅ Acompanhamento pronto!");
+        System.out.println("[Mediator/Fritadeira] Acompanhamento pronto!");
         avisar("ACOMPANHAMENTO_PRONTO");
     }
 }

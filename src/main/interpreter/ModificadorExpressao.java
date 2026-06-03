@@ -11,6 +11,7 @@ import java.util.List;
 public class ModificadorExpressao implements IExpressao {
 
     private final String modificador;
+
     private final String alvo;
 
     public ModificadorExpressao(String modificador, String alvo) {
@@ -23,8 +24,7 @@ public class ModificadorExpressao implements IExpressao {
         List<IItemCardapio> itens = contexto.getItens();
 
         if(itens.isEmpty()) {
-            System.out.println("[Interpreter/Modificador] Nenhum item no carrinho "
-                    + "para modificar.");
+            System.out.println("[Interpreter/Modificador] Nenhum item no carrinho para modificar.");
             return;
         }
 
@@ -34,25 +34,23 @@ public class ModificadorExpressao implements IExpressao {
         if (modificado != ultimo) {
             contexto.removerItem(ultimo);
             contexto.adicionarItem(modificado);
-            System.out.println("[Interpreter/Modificador] Aplicado \""
-                    + modificador + " " + alvo + "\" em: "
-                    + modificado.getDescricao());
+            System.out.println("[Interpreter/Modificador] Aplicado \"" + modificador + " " + alvo + "\" em: " + modificado.getDescricao());
         }
     }
 
     private IItemCardapio aplicarModificador(IItemCardapio item) {
-
         if (modificador.equals("sem")) {
-            return new RemoverIngredienteDecorator(item,alvo);
+            String alvoFormatado = alvo.substring(0, 1).toUpperCase() + alvo.substring(1);
+            return new RemoverIngredienteDecorator(item, alvoFormatado);
         }
-        if (modificador.equals("com") || modificador.equals ("adicionar")) {
+
+        if (modificador.equals("com") || modificador.equals("adicionar")) {
             switch (alvo) {
                 case "bacon": return new BaconDecorator(item);
                 case "cheddar": return new CheddarDecorator(item);
                 case "ovo": return new OvoDecorator(item);
                 default:
-                    System.out.println("[Interpreter/Modificador] Adicional \""
-                            + alvo + "\" não reconhecido");
+                    System.out.println("[Interpreter/Modificador] Adicional \"" + alvo + "\" não reconhecido");
                     return item;
             }
         }

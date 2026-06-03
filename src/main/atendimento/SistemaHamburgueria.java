@@ -5,6 +5,7 @@ public class SistemaHamburgueria {
     private static volatile SistemaHamburgueria instancia;
 
     private String nomeRestaurante;
+
     private boolean aberto;
 
     private SistemaHamburgueria() {

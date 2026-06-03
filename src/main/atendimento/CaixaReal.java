@@ -5,6 +5,7 @@ import main.model.Pedido;
 public class CaixaReal implements IOperacaoCaixa {
 
     private String operadorAtual;
+
     private boolean aberto = false;
 
     @Override

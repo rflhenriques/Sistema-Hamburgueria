@@ -5,6 +5,7 @@ import main.model.Pedido;
 public class DescontoPromocaoDia extends ProcessadorDesconto {
 
     private static final String CODIGO = "PROMO10";
+
     private static final double PCT = 10.0;
 
     @Override

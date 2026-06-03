@@ -6,6 +6,7 @@ import java.util.Map;
 public class GerenciadorEstoque {
 
     private static volatile GerenciadorEstoque instancia;
+
     private final Map <String, Integer> estoque;
 
     private GerenciadorEstoque() {
@@ -26,7 +27,6 @@ public class GerenciadorEstoque {
     }
 
     private void inicializarEstoque() {
-
         estoque.put("Pão", 100);
         estoque.put("Carne", 80);
         estoque.put("Bacon", 50);

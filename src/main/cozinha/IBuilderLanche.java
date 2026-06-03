@@ -3,6 +3,7 @@ package main.cozinha;
 import main.cardapio.Produto;
 
 public interface IBuilderLanche {
+
     IBuilderLanche setPao(String tipoPao);
 
     IBuilderLanche setCarne(String tipoCarne);
@@ -14,4 +15,5 @@ public interface IBuilderLanche {
     Produto getResultado();
 
     void reset();
+
 }

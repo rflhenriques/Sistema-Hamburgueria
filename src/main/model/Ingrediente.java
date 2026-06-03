@@ -3,6 +3,7 @@ package main.model;
 public class Ingrediente {
 
     private final String nome;
+
     private final double preco;
 
     public Ingrediente(String nome, double preco) {

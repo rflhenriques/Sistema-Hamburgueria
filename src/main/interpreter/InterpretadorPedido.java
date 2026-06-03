@@ -8,7 +8,7 @@ import java.util.List;
 public class InterpretadorPedido {
 
     private static final List<String> ITENS_VALIDOS = Arrays.asList(
-            "clássico","veggie","batata","fritas","refrigerante","refri",
+            "classico","veggie","batata","fritas","refrigerante","refri",
             "suco","sorvete","brownie","onion","onionrings"
     );
 

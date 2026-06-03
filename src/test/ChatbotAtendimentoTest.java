@@ -21,7 +21,7 @@ class ChatbotAtendimentoTest {
     @Test @DisplayName("Interpreta '1 classico' e adiciona 1 item")
     void testUmClassico() {
         interpretador.interpretar("1 classico", carrinho);
-        assertEquals(0, carrinho.getItens().size());
+        assertEquals(1, carrinho.getItens().size());
     }
 
     @Test @DisplayName("Interpreta '2 batata' e adiciona 2 itens")

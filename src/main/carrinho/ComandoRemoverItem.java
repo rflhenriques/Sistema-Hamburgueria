@@ -6,6 +6,7 @@ import main.model.Carrinho;
 public class ComandoRemoverItem implements IComando {
 
     private final Carrinho carrinho;
+
     private final IItemCardapio item;
 
     public ComandoRemoverItem(Carrinho carrinho, IItemCardapio item) {

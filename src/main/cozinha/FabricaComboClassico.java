@@ -7,22 +7,12 @@ public class FabricaComboClassico implements IFabricaCombo {
 
     @Override
     public Produto criarBurger() {
-        return null;
-    }
-
-    @Override
-    public Produto criarBurguer() {
-        return new Produto("Burguer Clássico", 22.90, "Hamburguer",
-                FabricaInfoNutricional.getInfo("Burguer Clássico"));
+        return new Produto("Burger Clássico", 22.90, "Hambúrguer",
+                FabricaInfoNutricional.getInfo("Burger Clássico"));
     }
 
     @Override
     public Produto criarBebida() {
-        return null;
-    }
-
-    @Override
-    public Produto CriarBebida() {
         return new Produto("Refrigerante", 7.00, "Bebida",
                 FabricaInfoNutricional.getInfo("Refrigerante"));
     }

@@ -5,6 +5,7 @@ import main.model.Pedido;
 public class DescontoGerente extends ProcessadorDesconto {
 
     private static final String CODIGO  = "GERENTE50";
+
     private static final double PERCENT = 50.0;
 
     @Override

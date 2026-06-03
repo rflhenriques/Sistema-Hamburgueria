@@ -11,10 +11,10 @@ import main.notificacao.IObserver;
 public class TotemFacade {
 
     private final GerenciadorEstoque estoque;
-    private final FilaCozinha        filaCozinha;
+    private final FilaCozinha filaCozinha;
 
     public TotemFacade() {
-        this.estoque      = GerenciadorEstoque.getInstancia();
+        this.estoque = GerenciadorEstoque.getInstancia();
         this.filaCozinha  = new FilaCozinha();
         System.out.println("[Facade] TotemFacade inicializado.");
     }
@@ -26,7 +26,7 @@ public class TotemFacade {
         System.out.println("\n[Facade] Iniciando processamento do pedido...");
 
         if (!validarEstoque(carrinho)) {
-            System.out.println("[Facade] ❌ Pedido cancelado: itens fora de main.estoque.");
+            System.out.println("[Facade] Pedido cancelado: itens fora de main.estoque.");
             return null;
         }
 
@@ -44,7 +44,7 @@ public class TotemFacade {
         boolean pagamentoOk = estrategiaPagamento.processar(total);
 
         if (!pagamentoOk) {
-            System.out.println("[Facade] ❌ Pagamento recusado.");
+            System.out.println("[Facade] Pagamento recusado.");
             return null;
         }
 
@@ -56,7 +56,7 @@ public class TotemFacade {
         pedido.avancarEstado();
         filaCozinha.adicionar(pedido);
 
-        System.out.println("[Facade] ✅ Pedido #" + pedido.getId() + " finalizado com sucesso!");
+        System.out.println("[Facade] Pedido #" + pedido.getId() + " finalizado com sucesso!");
         System.out.println("[Facade] Total pago: R$ " + String.format("%.2f", total));
 
         return pedido;

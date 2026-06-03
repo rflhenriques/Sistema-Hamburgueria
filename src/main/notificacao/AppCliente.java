@@ -4,12 +4,13 @@ import main.model.Pedido;
 
 public class AppCliente implements IObserver {
 
-    private final String        nomeCliente;
-    private final Notificacao   notificacao;
+    private final String nomeCliente;
+
+    private final Notificacao notificacao;
 
     public AppCliente(String nomeCliente, Notificacao notificacao) {
-        this.nomeCliente  = nomeCliente;
-        this.notificacao  = notificacao;
+        this.nomeCliente = nomeCliente;
+        this.notificacao = notificacao;
     }
 
     @Override

@@ -35,8 +35,8 @@ class FluxoPedidoTest {
     void testCancelarNaCozinha() {
         Pedido.resetContador();
         Pedido p = new Pedido("Teste");
-        p.avancarEstado(); // PAGO
-        p.avancarEstado(); // NA_COZINHA
+        p.avancarEstado();
+        p.avancarEstado();
         assertThrows(IllegalStateException.class, p::cancelar);
     }
 
@@ -55,7 +55,7 @@ class FluxoPedidoTest {
         p.avancarEstado();
 
         assertEquals(2, estadosCapturados.size());
-        assertEquals("PAGO",       estadosCapturados.get(0));
+        assertEquals("PAGO", estadosCapturados.get(0));
         assertEquals("NA_COZINHA", estadosCapturados.get(1));
     }
 }

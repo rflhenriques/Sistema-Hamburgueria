@@ -16,10 +16,15 @@ public class Pedido implements Cloneable {
     }
 
     private final int id;
+
     private List<IItemCardapio> itens;
+
     private IEstadoPedido estadoAtual;
+
     private final List<IObserver> observers;
+
     private String nomeCliente;
+
     private double totalPago;
 
     public Pedido(String nomeCliente) {
@@ -98,12 +103,15 @@ public class Pedido implements Cloneable {
     public int getId() {
         return id;
     }
+
     public String getNomeCliente() {
         return nomeCliente;
     }
+
     public double getTotalPago() {
         return totalPago;
     }
+
     public void setTotalPago(double v) {
         this.totalPago = v;
     }

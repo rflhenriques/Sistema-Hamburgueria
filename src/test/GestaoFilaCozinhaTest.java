@@ -22,16 +22,14 @@ class GestaoFilaCozinhaTest {
         pedido2 = new Pedido("Cliente 2");
     }
 
-    @Test
-    @DisplayName("adicionar() coloca o pedido na fila e tamanho aumenta")
+    @Test @DisplayName("adicionar() coloca o pedido na fila e tamanho aumenta")
     void testAdicionarPedido() {
         fila.adicionar(pedido1);
         assertEquals(1, fila.tamanho());
         assertFalse(fila.isEmpty());
     }
 
-    @Test
-    @DisplayName("proximoPedido() remove e retorna o primeiro pedido adicionado (FIFO)")
+    @Test @DisplayName("proximoPedido() remove e retorna o primeiro pedido adicionado (FIFO)")
     void testProximoPedido() {
         fila.adicionar(pedido1);
         fila.adicionar(pedido2);
@@ -42,14 +40,12 @@ class GestaoFilaCozinhaTest {
         assertEquals(1, fila.tamanho());
     }
 
-    @Test
-    @DisplayName("proximoPedido() em fila vazia retorna null")
+    @Test @DisplayName("proximoPedido() em fila vazia retorna null")
     void testProximoPedidoFilaVazia() {
         assertNull(fila.proximoPedido());
     }
 
-    @Test
-    @DisplayName("exibirFila() não lança exceções ao imprimir")
+    @Test @DisplayName("exibirFila() não lança exceções ao imprimir")
     void testExibirFila() {
         assertDoesNotThrow(() -> fila.exibirFila());
         fila.adicionar(pedido1);

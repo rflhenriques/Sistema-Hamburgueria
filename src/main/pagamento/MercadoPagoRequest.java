@@ -3,7 +3,9 @@ package main.pagamento;
 public class MercadoPagoRequest {
 
     private double amount;
+
     private String paymentMethod;
+
     private String externalReference;
 
     public MercadoPagoRequest(double amount, String paymentMethod,
@@ -16,9 +18,11 @@ public class MercadoPagoRequest {
     public double getAmount() {
         return amount;
     }
+
     public String getPaymentMethod() {
         return paymentMethod;
     }
+
     public String getExternalReference() {
         return externalReference;
     }

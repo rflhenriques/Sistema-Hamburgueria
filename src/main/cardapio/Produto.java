@@ -5,8 +5,11 @@ import main.visitor.IVisitor;
 public class Produto implements IItemCardapio {
 
     private final String nome;
+
     private final double preco;
+
     private final String categoria;
+
     private final InfoNutricional infoNutricional;
 
     public Produto(String nome, double preco, String categoria, InfoNutricional info) {

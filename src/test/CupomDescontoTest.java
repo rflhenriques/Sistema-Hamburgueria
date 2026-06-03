@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Chain of Responsibility")
 class CupomDescontoTest {
 
-    private Pedido             pedido;
+    private Pedido pedido;
     private ProcessadorDesconto cadeia;
 
     @BeforeEach void setUp() {

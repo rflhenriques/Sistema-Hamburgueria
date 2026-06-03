@@ -8,10 +8,15 @@ import java.util.List;
 public class MontadorBurgerCustomizado implements IBuilderLanche {
 
     private String tipoPao = "Pão Padrão";
+
     private String tipoCarne = "Carne Bovina";
+
     private double precoBase = 18.00;
+
     private final List<String> adicionais = new ArrayList<>();
+
     private final List<String> removidos = new ArrayList<>();
+
     private double precoAdicionais = 0.0;
 
     @Override

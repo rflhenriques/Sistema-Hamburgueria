@@ -3,7 +3,9 @@ package main.interpreter;
 public class ContextoInterpretador {
 
     private String textoOriginal;
+
     private String[] tokens;
+
     private int posicao = 0;
 
     public ContextoInterpretador(String texto) {

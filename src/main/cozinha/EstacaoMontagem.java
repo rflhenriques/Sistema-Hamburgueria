@@ -9,7 +9,7 @@ public class EstacaoMontagem extends EstacaoCozinha {
     @Override
     public void executar(String tarefa) {
         System.out.println("[Mediator/Montagem] Montando pedido: " + tarefa);
-        System.out.println("[Mediator/Montagem] ✅ Pedido montado e embalado!");
+        System.out.println("[Mediator/Montagem] Pedido montado e embalado!");
         avisar("PEDIDO_PRONTO");
     }
 }

@@ -9,6 +9,7 @@ import java.util.List;
 public class Carrinho {
 
     private final List<IItemCardapio> itens = new ArrayList<>();
+
     private final Deque<PedidoMemento> historico = new ArrayDeque<>();
 
     private void salvarSnapshot() {

@@ -3,6 +3,7 @@ package main.cozinha;
 public abstract class EstacaoCozinha {
 
     protected final String nome;
+
     protected IMediadorCozinha mediador;
 
     public EstacaoCozinha(String nome) {

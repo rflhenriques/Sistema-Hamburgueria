@@ -9,4 +9,5 @@ public interface IItemCardapio {
     String getDescricao();
 
     void aceitar(IVisitor visitor);
+
 }

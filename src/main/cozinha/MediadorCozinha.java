@@ -6,7 +6,9 @@ import java.util.Map;
 public class MediadorCozinha implements IMediadorCozinha {
 
     private final Map<String, EstacaoCozinha> estacoes = new HashMap<>();
+
     private boolean proteinaProta = false;
+
     private boolean acompanhamentoProto = false;
 
     public void reiniciar() {
